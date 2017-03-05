@@ -26,5 +26,5 @@ data.mean.std <- data[,c(1,2,search)]
 # Find the means, grouped by subject/label
 seconddata <- aggregate(data.mean.std[, 3:ncol(data.mean.std)],by=list(subject = data.mean.std$subject, label = data.mean.std$label),mean)
 ## create table for second data set and save file
-write.table(format(seconddata, scientific=T), "UCI HAR Dataset/tidy.txt",row.names=F, col.names=F, quote=2)
+write.table(format(seconddata, scientific=T), "UCI HAR Dataset/seconddata.txt",row.names=F, col.names=F, quote=2)
 
